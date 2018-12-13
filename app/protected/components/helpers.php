@@ -93,7 +93,7 @@ function getFolderName($folder_id) {
 
 function message_udate($tstamp) {
   // if day of year of now is less than or equal to time_str
-  if (date('z',time()) > date('z',$tstamp)) {
+  if (date('z',time()) <= date('z',$tstamp)) {
     $date_str = Yii::app()->dateFormatter->format('h:mm a',$tstamp,'medium',null);
   }
     else {
